@@ -1,0 +1,28 @@
+^F:\DEVREV\CARWASH\BUILD\WINDOWS\CMAKEFILES\0A4AA63473910FAA6300E5114F1F1EDD\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=F:\Flutter\flutter PROJECT_DIR=F:\DevRev\carwash FLUTTER_ROOT=F:\Flutter\flutter FLUTTER_EPHEMERAL_DIR=F:\DevRev\carwash\windows\flutter\ephemeral PROJECT_DIR=F:\DevRev\carwash FLUTTER_TARGET=F:\DevRev\carwash\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=F:\DevRev\carwash\.dart_tool\package_config.json F:/Flutter/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^F:\DEVREV\CARWASH\BUILD\WINDOWS\CMAKEFILES\0A52A4F541B24B067664489FC17F170E\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^F:\DEVREV\CARWASH\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SF:/DevRev/carwash/windows -BF:/DevRev/carwash/build/windows --check-stamp-file F:/DevRev/carwash/build/windows/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

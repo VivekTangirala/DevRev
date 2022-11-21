@@ -1,0 +1,10 @@
+^F:\DEVREV\CARWASH\BUILD\WINDOWS\CMAKEFILES\D8D8E2FD2DDF1B26707C467A8614518E\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SF:/DevRev/carwash/windows -BF:/DevRev/carwash/build/windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file F:/DevRev/carwash/build/windows/carwash.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,10 @@
+F:/DevRev/carwash/build/windows/runner/Debug/data/icudtl.dat
+F:/DevRev/carwash/build/windows/runner/Debug/flutter_windows.dll
+F:/DevRev/carwash/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+F:/DevRev/carwash/build/windows/runner/Debug/data/flutter_assets/assets/splash_screen.jpg
+F:/DevRev/carwash/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
+F:/DevRev/carwash/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+F:/DevRev/carwash/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
+F:/DevRev/carwash/build/windows/runner/Debug/data/flutter_assets/NOTICES
+F:/DevRev/carwash/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
+F:/DevRev/carwash/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
