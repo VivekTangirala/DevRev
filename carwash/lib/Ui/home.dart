@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: isLoading == true
             ? const CircularProgressIndicator()
-            : Text(response?[1000].title ?? " empty"),
+            : AppText(text: response?[22].title ?? " empty"),
       ),
     );
   }

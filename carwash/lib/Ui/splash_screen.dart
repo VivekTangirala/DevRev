@@ -18,6 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigateTo() async {
+    Constants.screenWidth = MediaQuery.of(context).size.width;
+    Constants.screenHeight = MediaQuery.of(context).size.height;
     bool isUserLoggedIn =
         Constants.sharedPreferences?.getString('token')?.isNotEmpty ??
             false; //to check if user is already logged in or not
