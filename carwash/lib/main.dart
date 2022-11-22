@@ -10,6 +10,7 @@ Future<void> servicesToInitializeBeforeAppStartup() async {
 }
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runZonedGuarded(
     () async {
       await servicesToInitializeBeforeAppStartup();

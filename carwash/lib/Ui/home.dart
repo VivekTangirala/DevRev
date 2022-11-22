@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import '../file_exporter.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,14 +12,17 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   bool isLoading = true;
   List<ApiResponseDemo>? response;
+  String str = "";
   @override
   void initState() {
-    super.initState();
     getData();
+    super.initState();
   }
 
   void getData() async {
-    response = await ApiService.getApiResponseDemo("user/");
+    log("making the api call");
+    str = await ApiService.getApiResponseDemo("user/");
+    log("Inside get data home response is $str");
     isLoading = false;
     setState(() {});
   }
@@ -28,7 +33,12 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: isLoading == true
             ? const CircularProgressIndicator()
-            : AppText(text: response?[22].title ?? " empty"),
+            : Column(
+                children: [
+                  const AppText(text: "Home page"),
+                  AppText(text: str),
+                ],
+              ),
       ),
     );
   }
