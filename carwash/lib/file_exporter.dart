@@ -14,8 +14,10 @@ export 'package:easy_widgets/widgets.dart';
 //pages
 export 'package:carwash/Helpers/constants.dart';
 export 'package:carwash/Ui/home.dart';
-export 'package:carwash/Ui/login.dart';
 export '../Widgets/common_widgets.dart';
+export 'package:carwash/Helpers/loading_screen.dart';
+export 'package:carwash/ui/Auth/login.dart';
+export 'package:carwash/ui/Auth/signup.dart';
 
 //models
 export 'package:carwash/models/api_response_demo/api_response_demo.dart';

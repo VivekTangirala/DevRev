@@ -1,6 +1,3 @@
-import 'package:carwash/Helpers/loading_screen.dart';
-import 'package:carwash/Services/api_service.dart';
-
 import '../file_exporter.dart';
 
 class SplashScreen extends StatefulWidget {

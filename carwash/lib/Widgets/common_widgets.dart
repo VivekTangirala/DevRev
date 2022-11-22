@@ -34,3 +34,26 @@ class AppText extends StatelessWidget {
     );
   }
 }
+
+class AlertDialogBox {
+  static Future<dynamic> showDialogBox({
+    required String alert,
+    String? content,
+    required BuildContext context,
+    String? textBox,
+  }) {
+    return showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: AppText(text: alert),
+        content: AppText(text: content ?? ""),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: AppText(text: textBox ?? "ok"),
+          )
+        ],
+      ),
+    );
+  }
+}

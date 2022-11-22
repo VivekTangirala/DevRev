@@ -1,15 +1,16 @@
-import '../file_exporter.dart';
+import '../../file_exporter.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class Signup extends StatefulWidget {
+  const Signup({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<Signup> createState() => _SignupState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignupState extends State<Signup> {
   TextEditingController usernameController = TextEditingController();
   TextEditingController paswordController = TextEditingController();
+  TextEditingController confirmPaswordController = TextEditingController();
 
   @override
   void initState() {
@@ -17,39 +18,40 @@ class _LoginPageState extends State<LoginPage> {
     super.initState();
   }
 
-  void onPressedLogin() {}
+  void onPressedSignUp() async {
+    AlertDialogBox.showDialogBox(alert: "Can't signup now", context: context);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 241, 171, 128),
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(
-              width: Constants.screenWidth,
-              child: Column(
-                children: [
-                  10.hGap,
-                  const AppText(
-                    text: "Welcome to Car Wash",
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  30.hGap,
-                  const AppText(
-                    text: "Login",
-                    fontSize: 30,
-                  ),
-                  10.hGap,
-                  textFields(),
-                ],
+        child: SizedBox(
+          width: Constants.screenWidth,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const AppText(
+                text: "Enter your credentials here",
+                fontSize: 30,
               ),
-            ),
-          ],
+              10.hGap,
+              textFields(),
+            ],
+          ),
         ),
       ),
     );
@@ -61,10 +63,10 @@ class _LoginPageState extends State<LoginPage> {
         vertical: 20.hWise,
         horizontal: 20.wWise,
       ),
-      height: Constants.screenHeight! / 2.5,
+      height: Constants.screenHeight! / 2,
       width: Constants.screenWidth! / 2.5,
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 244, 156, 102),
+        color: const Color.fromARGB(255, 244, 156, 102),
         borderRadius: BorderRadius.circular(
           10.wWise,
         ),
@@ -90,6 +92,16 @@ class _LoginPageState extends State<LoginPage> {
             obscureText: true,
             controller: paswordController,
           ),
+          5.hGap,
+          TextField(
+            decoration: const InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: "Confirm Password",
+              hintText: "pass123\$",
+            ),
+            obscureText: true,
+            controller: confirmPaswordController,
+          ),
           10.hGap,
           Container(
             padding: EdgeInsets.symmetric(
@@ -103,10 +115,10 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             child: AppText(
-              text: "Login",
+              text: "SignUp",
               fontSize: 20.wWise,
               fontWeight: FontWeight.bold,
-            ).onTap(onPressedLogin),
+            ).onTap(onPressedSignUp),
           )
         ],
       ),
