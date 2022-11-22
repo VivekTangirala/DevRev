@@ -6,6 +6,7 @@ import 'file_exporter.dart';
 
 Future<void> servicesToInitializeBeforeAppStartup() async {
   Constants.sharedPreferences = await SharedPreferences.getInstance();
+  Constants.sharedPreferences?.setString('token', "value");
 }
 
 void main() async {

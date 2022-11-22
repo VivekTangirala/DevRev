@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void getData() async {
-    response = await ApiService.getApiResponseDemo();
+    response = await ApiService.getApiResponseDemo("user/");
     isLoading = false;
     setState(() {});
   }

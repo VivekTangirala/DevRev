@@ -1,7 +1,8 @@
 //dependencies
 export 'dart:async';
 export 'package:flutter/material.dart';
-export '../Services/api_service.dart';
+export 'package:carwash/api/api_service.dart';
+
 //easy-widgets package
 export 'package:easy_widgets/easy_widget.dart';
 export 'package:easy_widgets/easy_widget_enum.dart';
